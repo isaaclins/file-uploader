@@ -15,6 +15,10 @@ curl --insecure -F "file=@%FILE_PATH%" "%API_URL%" > response.json
 set "json_file=response.json"
 set "short="
 for /f "usebackq tokens=2 delims=: " %%G in (`powershell -Command "(Get-Content '%json_file%' | ConvertFrom-Json).data.file.url.short"`) do set "short=%%~G"
+ cls 
+
+color 5
+echo | set /p= https:%short%|clip
 
 
 :next
@@ -24,9 +28,6 @@ if "%short%"=="" (
     goto :cleanup
 )
 
-echo File uploaded successfully. URL:
-echo %short%
-
 :cleanup
 del response.json
 
@@ -34,7 +35,7 @@ echo #############################################
 echo ##                                         ##
 echo ##                                         ##
 echo ##          COPIED TO CLIPBOARD            ##
-echo ##                                         ##
+echo ##   (https:%short%)    ##
 echo ##                                         ##
 echo #############################################
 pause
