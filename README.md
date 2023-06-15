@@ -27,3 +27,5 @@ This project is provided "as is" and the creator of this repository takes no res
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fisaaclins%2Ffile-uploader&label=VISITORS%3A&labelColor=%230d1117&countColor=%230d1117)
